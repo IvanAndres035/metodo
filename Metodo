@@ -1,0 +1,33 @@
+'''
+>>> Multiplo = Multiplo(6,12)
+>>> Multiplo.Numero()
+True
+>>> Multiplo.Numero()
+True
+'''
+class Multiplo: #Nombre de la clase
+    __Numero1 = int()
+    __Numero2 = int()
+
+    def __init__(self, Numero1, Numero2):#Metodo constructor con Numero1 y Numero2
+
+        self.__Numero1 = Numero1 #Numero1 es igual a Numero1
+        self.__Numero2 = Numero2 #Numero2 es igual a Numero2
+        self.Numero() #Metodo de hara la operacion
+
+    def Numero(self): #Metodo de la operacion
+
+        if(self.__Numero2 % self.__Numero1 == 0 ): # SI NUMERO 1 
+            self.__NumeroMultiplo = True
+            return True
+        else:
+            self.__NumeroMultiplo = False
+            return False
+
+    def getNumeroMultiplo(self):
+        if (self.Numero() == True):
+           return self.__NumeroMultiplo
+
+if __name__ =='__main__':
+    import doctest
+    doctest.testmod()
